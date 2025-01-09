@@ -1,0 +1,370 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Home</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="static/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="static/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<link rel="stylesheet" href="static/css/linearicons.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="static/css/animate.css">
+
+		<!--flaticon.css-->
+        <link rel="stylesheet" href="static/css/flaticon.css">
+
+		<!--slick.css-->
+        <link rel="stylesheet" href="static/css/slick.css">
+		<link rel="stylesheet" href="static/css/slick-theme.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="static/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="static/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="static/css/responsive.css">
+    </head>
+	<body>
+		<!-- top-area Start -->
+		<section class="top-area">
+			<div class="header-area">
+				<!-- Start Navigation -->
+			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+			        <div class="container">
+
+			            <!-- Start Header Navigation -->
+			            <div class="navbar-header">
+			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+			                    <i class="fa fa-bars"></i>
+			                </button>
+			                <a class="navbar-brand" href="index.html">list<span>race</span></a>
+
+			            </div><!--/.navbar-header-->
+			            <!-- End Header Navigation -->
+			            <!-- Collect the nav links, forms, and other content for toggling -->
+			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+			                    <li class=" scroll active"><a href="#home">Home</a></li>
+			                    <!--  <li class="scroll"><a href="#works">how it works</a></li> -->
+			                    <li class="scroll"><a href="#explore">Product</a></li>
+			                    <li class="scroll"><a href="#reviews">Top price</a></li>
+			                    <li >  <a href="{{ url_for('logout') }}">{{ username }}</a> </li>
+			                </ul><!--/.nav -->
+			            </div><!-- /.navbar-collapse -->
+			        </div><!--/.container-->
+			    </nav><!--/nav-->
+			    <!-- End Navigation -->
+			</div><!--/.header-area-->
+		    <div class="clearfix"></div>
+		</section><!-- /.top-area-->
+		<!-- top-area End -->
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
+			<div class="container">
+				<div class="welcome-hero-txt">
+					<h2>best place to find and explore <br> that all you need </h2>
+					<p>
+						Find Best Place, Restaurant, Hotel, Real State and many more think in just One click 
+					</p>
+				</div>
+			</div>
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+		<!--list-topics start -->
+		<section id="list-topics" class="list-topics">
+			<div class="container">
+				<div class="list-topics-content">
+					<ul>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									<i class="flaticon-building"></i>
+								</div>
+								<h2><a href="{{ url_for('Thue', item_id=1) }}">Cho Thuê</a></h2>
+								<p>214 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									<i class="flaticon-building"></i>
+								</div>
+								<h2><a href="#">Sản phẩm Bán</a></h2>
+								<p>185 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									<i class="flaticon-building"></i>
+								</div>
+								<h2><a href="#">Văn Phòng</a></h2>
+								<p>200 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									<i class="flaticon-building"></i>
+								</div>
+								<h2><a href="#">Sản phẩm hot</a></h2>
+								<p>200 listings</p>
+							</div>
+						</li>
+						<li>
+							<div class="single-list-topics-content">
+								<div class="single-list-topics-icon">
+									<i class="flaticon-building"></i>
+								</div>
+								<h2><a href="#">Đất</a></h2>
+								<p>200 listings</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.list-topics-->
+		<!--list-topics end-->
+		<!--explore start -->
+		<section id="explore" class="explore">
+			<div class="container">
+				<div class="section-header">
+					<h2>Search</h2>
+				</div><!--/.section-header-->
+				<form action="/" method="POST">
+				    <div class="search-form">
+						<form action="/" method="POST">
+							<label for="search_value">Thành phố:</label>
+							<select name="search_value" id="search_value">
+								<option value="">Thành phố</option>
+								<option value="admin" {% if search_value == "admin" %}selected{% endif %}>Hồ chí minh</option>
+							</select>
+							
+							<label for="search_value" style = 'padding-left : 19px'>Quận/huyện:</label>
+							<select name="search_value" id="search_value">
+								<option value="">Quận huyện</option>
+								<option value="admin" {% if search_value == "admin" %}selected{% endif %}>Admin</option>
+								<option value="user" {% if search_value == "user" %}selected{% endif %}>User</option>
+								<option value="guest" {% if search_value == "guest" %}selected{% endif %}>Guest</option>
+							</select>
+							<br>
+							<label for="search_value" style = 'padding-top : 19px' >Search by Role:</label>
+							<input type="text" class="form-control form-control-lg" placeholder="Địa chỉ,mô tả,ID ... ">
+							<button type="submit" style = 'margin-top : 19px'>Search</button>
+						</form>
+					</div>
+
+
+				<div class="explore-content">
+					<div class="row">
+						{% for product in product %}
+						<div class=" col-md-4 col-sm-6">
+							<div class="single-explore-item">
+								<div class="single-explore-img">
+									<img src="static/images/explore/e1.jpg" alt="explore image">
+									<div class="single-explore-img-info">
+										<button onclick="window.location.href='{{ url_for('detail') }}'">best rated</button>
+										<div class="single-explore-image-icon-box">
+											<ul>
+												<li>
+													<div class="single-explore-image-icon">
+														<i class="fa fa-arrows-alt"></i>
+													</div>
+												</li>
+												<li>
+													<div class="single-explore-image-icon">
+														<i class="fa fa-bookmark-o"></i>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="single-explore-txt bg-theme-1">
+									<h2><a href="#">{{ product.id}}</a></h2>
+									<p class="explore-rating-price">
+										<span class="explore-price-box">
+											<span class="explore-price">{{ product.price }}</span>
+										</span>
+									</p>
+									<div class="explore-person">
+										<div class="row">
+											<div class="col-sm-2">
+												<div class="explore-person-img">
+													<a href="#">
+														<img src="static/images/explore/person.png" alt="explore person">
+													</a>
+												</div>
+											</div>
+											<div class="col-sm-10">
+												<p>
+													{{ product.title| truncate_text(60) }}
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="explore-open-close-part">
+										<div class="row">
+											<div class="col-sm-5">
+												<button class="close-btn" onclick="window.location.href='#'">close now</button>
+											</div>
+											<div class="col-sm-7">
+												<div class="explore-map-icon">
+													<a href="#"><i data-feather="map-pin"></i></a>
+													<a href="#"><i data-feather="upload"></i></a>
+													<a href="#"><i data-feather="heart"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+						</div>
+						<div>
+								
+							{% if current_page > 1 %}
+							<a href="/?page={{ current_page - 1 }}">Previous</a>
+							{% endif %}
+					
+							Page {{ current_page }} of {{ total_pages }}
+					
+							{% if current_page < total_pages %}
+							<a href="/?page={{ current_page + 1 }}">Next</a>
+							{% endif %}
+							<form action="/" method="get">
+								<label for="page">Go to page:</label>
+								<select name="page" id="page" onchange="this.form.submit()">
+									{% for page in range(1, total_pages + 1) %}
+										<option value="{{ page }}" {% if page == current_page %}selected{% endif %}>Page {{ page }}</option>
+									{% endfor %}
+								</select>
+							</form>
+						</div>
+						
+					</div>
+				</div>
+			</div><!--/.container-->
+
+		</section><!--/.explore-->
+		<!--explore end -->
+
+		<!--reviews start -->
+		<section id="reviews" class="reviews">
+			<div class="section-header">
+				<h2>Top bán chạy</h2>
+			</div><!--/.section-header-->
+			<div class="reviews-content">
+				<div class="testimonial-carousel">
+				    {% for topPro in topPro %}
+				    <div class="single-testimonial-box">
+						<div class="testimonial-description">
+							<div class="testimonial-info">
+								<div class="testimonial-img">
+									<img src="static/images/clients/c4.png" alt="clients">
+								</div><!--/.testimonial-img-->
+								<div class="testimonial-person">
+									<h2>{{ topPro.id}}</h2>
+									<h4>{{ topPro.price}}</h4>
+									<div class="testimonial-person-star">
+										<i class="fa fa-star"></i>
+									</div>
+								</div><!--/.testimonial-person-->
+							</div><!--/.testimonial-info-->
+							<div class="testimonial-comment">
+								<p>
+									{{ topPro.title| truncate_text(40) }}
+								</p>
+							</div><!--/.testimonial-comment-->
+						</div><!--/.testimonial-description-->
+					</div><!--/.single-testimonial-box-->
+					{% endfor %}
+				</div>
+			</div>
+
+		</section><!--/.reviews-->
+		<section id="contact"  class="subscription">
+		</section><!--/subscription-->	
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
+							</p><!--/p-->
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<span><i class="fa fa-phone"> +1  (222) 777 8888</i></span>
+								<a href="#"><i class="fa fa-facebook"></i></a>	
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-google-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
+		<script src="static/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="static/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="static/js/bootsnav.js"></script>
+
+        <!--feather.min.js-->
+        <script  src="static/js/feather.min.js"></script>
+
+        <!-- counter js -->
+		<script src="static/js/jquery.counterup.min.js"></script>
+		<script src="static/js/waypoints.min.js"></script>
+
+        <!--slick.min.js-->
+        <script src="static/js/slick.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		     
+        <!--Custom JS-->
+        <script src="static/js/custom.js"></script>
+        
+    </body>
+	
+</html>
